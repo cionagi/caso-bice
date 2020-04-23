@@ -45,7 +45,7 @@ app.get('/values/:id', async (req, res) => {
   res.json(data);
 });
 
-app.get('/values/:id?date', async (req, res) => {
+app.get('/value/:id', async (req, res) => {
   const { id } = req.params;
   const { date } = req.query;
 
