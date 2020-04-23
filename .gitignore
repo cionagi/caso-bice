@@ -129,3 +129,4 @@ yarn-error.log*
 !/.idea/
 !/frontend/package-lock.json
 /.idea/*
+frontend/package-lock.json
