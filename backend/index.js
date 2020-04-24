@@ -55,7 +55,8 @@ app.get('/values/:id', async (req, res) => {
   const { key, unit, values } = data;
   const dataResponse = Object.keys(values).map((k) => ({
     date: moment.unix(k).format('DD-MM-YYYY'),
-    value: parseValue.parse(unit, values[k]),
+    value: values[k],
+    valueFormat: parseValue.parse(unit, values[k]),
   }));
 
   res.json(dataResponse);
