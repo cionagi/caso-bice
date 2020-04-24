@@ -5,11 +5,13 @@
 - NPM
 
 ## FrontEnd
+Aplicación construida en con React Js
 
 ### Librerias
 - ReactJs (CRA)
 - React Hooks
 - Axios
+- Jest - RTL
 
 
 

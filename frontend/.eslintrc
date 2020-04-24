@@ -1,16 +1,17 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
     "airbnb",
     "plugin:jsx-a11y/recommended",
     "prettier/react",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "prettier", "react-hooks","jsx-a11y"],
+  "plugins": ["react", "prettier", "react-hooks", "jsx-a11y"],
   "overrides": [
     {
       "files": ["**/*.test.js", "**/*.test.jsx"],
@@ -46,6 +47,6 @@
         "ignoreTemplateLiterals": true
       }
     ],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }

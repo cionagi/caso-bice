@@ -27,7 +27,8 @@
     "eject": "react-scripts eject",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
     "lint": "eslint .",
-    "lint:fix": "eslint --cache --fix ."
+    "lint:fix": "eslint --cache --fix .",
+    "pre-commit": "lint-staged"
   },
   "husky": {
     "hooks": {
