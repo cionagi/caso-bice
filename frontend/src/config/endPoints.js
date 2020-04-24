@@ -1,4 +1,4 @@
-export const BASE_URL = 'localhost:8080';
+export const BASE_URL = process.env.REACT_APP_API_URL;
 
 export const ROUTES = {
   GET_VALUES: '/',
