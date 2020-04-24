@@ -2,7 +2,7 @@ import axios from 'axios';
 import { BASE_URL, ROUTES } from '../config/endPoints';
 
 export const getValues = async () => {
-  const res = await axios.get(`http://${BASE_URL}${ROUTES.GET_VALUES}`);
+  const res = await axios.get(`${BASE_URL}${ROUTES.GET_VALUES}`);
   const { status, data } = res;
   if (status === 200) {
     return data;
