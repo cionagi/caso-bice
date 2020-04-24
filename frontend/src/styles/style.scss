@@ -1,2 +1,22 @@
-@import "~bootstrap/scss/bootstrap";
-@import "colors";
+@import '~bootstrap/scss/bootstrap';
+@import 'colors';
+
+.custom-nav {
+  background-color: $PRIMARY_B !important;
+  a {
+    color: $SECONDARY_B;
+    font-weight: bold;
+  }
+}
+
+.badge-custom {
+  background-color: $GREEN_B;
+  color: white;
+  font-size: 1rem;
+}
+
+.btn-custom {
+  @extend .btn-primary;
+  background-color: $PRIMARY_B;
+  border-color: $PRIMARY_B;
+}
