@@ -4,28 +4,40 @@ import PropTypes from 'prop-types';
 
 // Components
 
-const Pagination = ({ current = 1, totalPage = 1, handlePagination }) => {
+const Pagination = ({ current, totalPage, handlePagination }) => {
   const [items, setItems] = useState([]);
-  useEffect(() => {
-    const a = [];
+
+  const drawItemPagination = () => {
+    const itemElement = [];
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < totalPage; i++) {
-      a.push(
-        <li
-          className={`page-item ${i === current && 'active'}`}
-          aria-current="page"
-          key={i}
-          onClick={() => {
-            handlePagination(i);
-          }}
-        >
-          <a className="page-link " href="#">
+      itemElement.push(
+        <li className={`page-item ${i === current && 'active'}`} aria-current="page" key={i}>
+          <span
+            tabIndex={i}
+            role="button"
+            className="page-link "
+            onClick={() => {
+              handlePagination(i);
+            }}
+            onKeyDown={() => {
+              handlePagination(i);
+            }}
+          >
             {i + 1}
-          </a>
+          </span>
         </li>
       );
     }
-    setItems(a);
+    setItems(itemElement);
+  };
+
+  useEffect(() => {
+    if (totalPage) {
+      drawItemPagination();
+    }
   }, [current, totalPage]);
+
   return (
     <nav>
       <ul className="pagination pagination-sm">{items}</ul>

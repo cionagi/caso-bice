@@ -6,11 +6,12 @@ import PropTypes from 'prop-types';
 import HistoricTable from './HistoricTable';
 import Loading from './Loading';
 import Pagination from './Pagination';
+import LineChartContainer from './LineChartContainer';
 
 const HistoricValue = ({ historicData, show }) => {
   const [state, setState] = useState({
-    loading: !!historicData.length,
-    data: [...historicData],
+    loading: true,
+    data: [],
     dataShow: [],
     perPage: 20,
     pagination: {
@@ -20,29 +21,34 @@ const HistoricValue = ({ historicData, show }) => {
   });
 
   useEffect(() => {
-    setState({
-      ...state,
+    const {
+      perPage,
+      pagination: { current },
+    } = state;
+
+    setState((prevState) => ({
+      ...prevState,
       loading: historicData.length,
       data: [...historicData],
-      dataShow: historicData.slice(
-        state.pagination.current * state.perPage,
-        (state.pagination.current + 1) * state.perPage
-      ),
+      dataShow: historicData.slice(current * perPage, (current + 1) * perPage),
       pagination: {
         current: 0,
         total: Math.round(historicData.length / state.perPage),
       },
-    });
+    }));
   }, [historicData]);
 
   useEffect(() => {
-    setState({
-      ...state,
-      dataShow: historicData.slice(
-        state.pagination.current * state.perPage,
-        (state.pagination.current + 1) * state.perPage
-      ),
-    });
+    const {
+      data,
+      perPage,
+      pagination: { current },
+    } = state;
+
+    setState((prevState) => ({
+      ...prevState,
+      dataShow: data.slice(current * perPage, (current + 1) * perPage),
+    }));
   }, [state.pagination.current]);
 
   const handlePagination = (page) => {
@@ -68,6 +74,11 @@ const HistoricValue = ({ historicData, show }) => {
               handlePagination={handlePagination}
             />
           </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 col-md-12">
+          {!!historicData.length && <LineChartContainer historicData={historicData} />}
         </div>
       </div>
     </div>

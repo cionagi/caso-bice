@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 // Components
 import HistoricValue from './HistoricValue';
 import { getValuesByKey } from '../Utils/actions';
-import LineChartContainer from './LineChartContainer';
 
 const RowValue = ({ valueData }) => {
   const { key, name, dateParse, valueParse } = valueData;
@@ -37,12 +36,6 @@ const RowValue = ({ valueData }) => {
           <div className="row">
             <div className="col-12 col-md-12">
               <HistoricValue historicData={historicData} show={openCollapse} />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-12 col-md-12">
-              {!!historicData.length && <LineChartContainer historicData={historicData} />}
             </div>
           </div>
         </div>
