@@ -51,9 +51,9 @@ Pagination.defaultProps = {
 };
 
 Pagination.propTypes = {
-  current: PropTypes.array,
-  totalPage: PropTypes.array,
-  handlePagination: PropTypes.array,
+  current: PropTypes.number,
+  totalPage: PropTypes.number,
+  handlePagination: PropTypes.func,
 };
 
 export default Pagination;
