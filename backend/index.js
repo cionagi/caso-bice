@@ -51,7 +51,14 @@ app.get('/values/:id', async (req, res) => {
   if (_.isEmpty(data)) {
     res.json({ data: {}, message: 'zero results' });
   }
-  res.json(data);
+
+  const { key, unit, values } = data;
+  const dataResponse = Object.keys(values).map((k) => ({
+    date: moment.unix(k).format('DD-MM-YYYY'),
+    value: parseValue.parse(unit, values[k]),
+  }));
+
+  res.json(dataResponse);
 });
 
 app.get('/values/:id?date', async (req, res) => {

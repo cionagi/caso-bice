@@ -8,7 +8,9 @@
 
 ### Librerias
 - ReactJs (CRA)
+- React Hooks
 - Axios
+
 
 
 ## Backend
