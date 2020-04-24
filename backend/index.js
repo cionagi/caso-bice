@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 8080;
 const axios = require('axios');
 const moment = require('moment');
 const _ = require('lodash');
+const parseValue = require('./utils/valueFormat');
 
 // Const
 const BASE_URL = 'https://www.indecon.online/';
@@ -20,14 +21,22 @@ const ROUTES = {
 };
 
 app.use(cors());
-
 // Get all values from BASE URL API
 app.get('/', async (request, res) => {
   const { status, data } = await axios.get(`${BASE_URL}${ROUTES['last']}`);
   if (status !== 200) {
     res.status(500).send('unknown error');
   }
-  res.json(data);
+
+  const dataFormat = Object.keys(data).map((key) => {
+    const { date, value, unit } = data[key];
+    return {
+      ...data[key],
+      dateParse: moment.unix(date).format('DD-MM-YYYY'),
+      valueParse: parseValue.parse(unit, value),
+    };
+  });
+  res.json(dataFormat);
 });
 
 // Get Data by id from BASE URL API
