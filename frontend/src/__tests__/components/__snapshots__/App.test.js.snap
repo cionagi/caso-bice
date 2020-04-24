@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar  custom-nav"
+  >
+    <a
+      class="navbar-brand"
+      href="/"
+    >
+      Caso BICE 
+    </a>
+  </nav>
+  <div
+    class="container"
+  >
+    <h1
+      class="my-3"
+    >
+      Indicadores diarios
+      <span
+        class="badge badge-custom ml-3"
+      >
+        24-04-2020
+      </span>
+    </h1>
+    <div
+      class="d-flex justify-content-center align-items-center"
+    >
+      <div
+        class="spinner-border"
+        role="status"
+        style="width: 5rem; height: 5rem;"
+      >
+        <span
+          class="sr-only"
+        >
+          Loading...
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

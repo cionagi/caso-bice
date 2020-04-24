@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="d-flex justify-content-center align-items-center"
+  >
+    <div
+      class="spinner-border"
+      role="status"
+      style="width: 5rem; height: 5rem;"
+    >
+      <span
+        class="sr-only"
+      >
+        Loading...
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

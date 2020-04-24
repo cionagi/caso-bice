@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+<DocumentFragment>
+  <nav>
+    <ul
+      class="pagination pagination-sm"
+    >
+      <li
+        aria-current="page"
+        class="page-item false"
+      >
+        <span
+          class="page-link "
+          role="button"
+          tabindex="0"
+        >
+          1
+        </span>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;

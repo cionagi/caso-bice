@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+<DocumentFragment>
+  <table
+    class="table table-striped table-hover table-sm table-dark text-center"
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Fecha
+        </th>
+        <th
+          scope="col"
+        >
+          Valor
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</DocumentFragment>
+`;
