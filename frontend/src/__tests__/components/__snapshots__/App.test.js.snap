@@ -22,7 +22,7 @@ exports[`Link renders correctly 1`] = `
       <span
         class="badge badge-custom ml-3"
       >
-        24-04-2020
+        25-04-2020
       </span>
     </h1>
     <div

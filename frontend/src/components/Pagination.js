@@ -23,6 +23,7 @@ const Pagination = ({ current, totalPage, handlePagination }) => {
             onKeyDown={() => {
               handlePagination(i);
             }}
+            data-testid={`pagination-item-${i}`}
           >
             {i + 1}
           </span>
@@ -40,7 +41,9 @@ const Pagination = ({ current, totalPage, handlePagination }) => {
 
   return (
     <nav>
-      <ul className="pagination pagination-sm">{items}</ul>
+      <ul className="pagination pagination-sm" data-testid="pagination">
+        {items}
+      </ul>
     </nav>
   );
 };

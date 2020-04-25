@@ -76,6 +76,7 @@ exports[`Link renders correctly 1`] = `
                     <nav>
                       <ul
                         class="pagination pagination-sm"
+                        data-testid="pagination"
                       />
                     </nav>
                   </div>

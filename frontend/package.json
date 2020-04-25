@@ -24,16 +24,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage",
+    "test:nowatch": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
     "lint": "eslint .",
     "lint:fix": "eslint --cache --fix .",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "test:1": "jest ---bail --findRelatedTests"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "post-commit": "npm run format",
       "post-merge": "npm install",
       "post-rewrite": "npm install"
     }
@@ -41,7 +43,8 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,md}": [
       "npm run format",
-      "npm run lint"
+      "npm run lint",
+      "npm run test:nowatch"
     ]
   },
   "browserslist": {
