@@ -28,7 +28,12 @@ const RowValue = ({ valueData }) => {
             <div className="col-12 col-md-3  d-flex align-items-center">{valueParse}</div>
             <div className="col-12 col-md-3 col-md-3 d-flex align-items-center">{dateParse}</div>
             <div className="col-12 col-md-3 d-flex align-items-center">
-              <button className="btn  btn-custom" type="button" onClick={() => getHistoric()}>
+              <button
+                className="btn  btn-custom"
+                type="button"
+                data-testid="btn-get-historic"
+                onClick={() => getHistoric()}
+              >
                 Historico
               </button>
             </div>
