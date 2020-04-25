@@ -27,6 +27,7 @@ exports[`Link renders correctly 1`] = `
     </h1>
     <div
       class="d-flex justify-content-center align-items-center"
+      data-testid="loading-component"
     >
       <div
         class="spinner-border"
