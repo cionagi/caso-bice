@@ -10,10 +10,6 @@ const _ = require('lodash');
 const parseValue = require('../utils/valueFormat');
 const { ROUTES, BASE_URL } = require('../config/routesExt');
 
-router.get('/', async (request, res) => {
-  res.send('Hola');
-});
-
 // Get all values from BASE URL API
 router.get('/values', async (request, res) => {
   console.log(`${BASE_URL}${ROUTES['last']}`);
