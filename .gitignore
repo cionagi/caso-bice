@@ -131,3 +131,5 @@ yarn-error.log*
 /.idea/*
 frontend/package-lock.json
 !/frontend/coverage/
+
+.now

@@ -1,13 +1,9 @@
 {
   "version": 2,
-  "name": "caso-bice",
   "builds": [
-    {
-      "src": "backend/*.js",
-      "use": "@now/node"
-    }
+    { "src": "backend/*.js", "use": "@now/node" }
   ],
-  "regions": [
-    "sin1"
+  "routes": [
+    { "src": "/(.*)", "dest": "/www/$1" }
   ]
 }
