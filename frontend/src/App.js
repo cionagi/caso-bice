@@ -33,7 +33,7 @@ const App = () => {
     <>
       <nav className="navbar  custom-nav">
         <a className="navbar-brand" href="/">
-          Caso BICE {process.env.BASE_UR}
+          Caso BICE
         </a>
       </nav>
       <div className="container">
