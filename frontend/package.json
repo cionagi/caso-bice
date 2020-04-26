@@ -34,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "lint-staged && npm run test:nowatch",
       "post-merge": "npm install",
       "post-rewrite": "npm install"
     }
@@ -42,8 +42,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,md}": [
       "npm run format",
-      "npm run lint",
-      "npm run test:nowatch"
+      "npm run lint"
     ]
   },
   "browserslist": {
