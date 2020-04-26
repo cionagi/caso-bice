@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // Dependency
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
