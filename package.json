@@ -10,14 +10,12 @@
     "concurrently": "^5.2.0"
   },
   "scripts": {
-    "install_frontend": "cd backend && npm i ",
-    "install_backend": "cd frontend && npm i",
-    "start:backend": "cd backend && npm run start",
-    "start:frontend": "cd frontend && npm start react-scripts start ",
-    "first_step": "npm run install_backend && npm run install_frontend",
+    "start:backend": "cd backend/ && npm install && npm start",
+    "start:frontend": "cd frontend && npm install && npm start react-scripts start ",
     "start_dev": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\"",
-    "start": "start:backend",
-    "heroku-postbuild": "cd frontend && npm run build"
+    "start": "run build_frontend && cd backend && npm start",
+    "heroku-postbuild": "run start",
+    "build_frontend": "cd frontend/ && npm install && npm run build"
   },
   "repository": {
     "type": "git",

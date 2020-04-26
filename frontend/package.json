@@ -29,9 +29,8 @@
     "eject": "react-scripts eject",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
     "lint": "eslint .",
-    "lint:fix": "eslint --cache --fix .",
-    "pre-commit": "lint-staged",
-    "test:1": "jest ---bail --findRelatedTests"
+    "lint:fix": "eslint --fix .",
+    "pre-commit": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -75,5 +74,6 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "proxy": "http://localhost:8080"
 }
