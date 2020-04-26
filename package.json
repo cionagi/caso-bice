@@ -15,8 +15,8 @@
     "start_dev": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\"",
     "start": "npm run build_frontend cd backend/ && npm install && npm start",
     "heroku-prebuild": "cd frontend && npm install && cd backend/ && npm install",
-    "heroku-postbuild": "npm run build_frontend",
-    "build_frontend": "cd frontend/ && npm install && npm build && cd backend/ && npm install && npm start",
+    "heroku-postbuild": "npm run build",
+    "build": "cd frontend/ && npm install && npm build && cd ../backend/ && npm install && npm start",
     "now_build": "npm run build_frontend && cd backend/ && npm run start"
   },
   "repository": {
