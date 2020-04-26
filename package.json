@@ -15,7 +15,8 @@
     "start:backend": "cd backend && npm start react-scripts start",
     "start:frontend": "cd frontend && npm start react-scripts start ",
     "first_step": "npm run install_backend && npm run install_frontend",
-    "start": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\""
+    "start": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\"",
+    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
