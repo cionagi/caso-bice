@@ -1,0 +1,31 @@
+{
+  "name": "caso-bice",
+  "version": "1.0.0",
+  "description": "## Requisitos - Node  - NPM",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^2.0.5"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "scripts": {
+    "install_frontend": "cd backend && npm i ",
+    "install_backend": "cd frontend && npm i",
+    "start:backend": "cd backend && npm start react-scripts start",
+    "start:frontend": "cd frontend && npm start react-scripts start ",
+    "first_step": "npm run install_backend && npm run install_frontend",
+    "start": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cionagi/caso-bice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cionagi/caso-bice/issues"
+  },
+  "homepage": "https://github.com/cionagi/caso-bice#readme",
+  "concurrently": "3.5.1"
+}
