@@ -12,10 +12,11 @@
   "scripts": {
     "install_frontend": "cd backend && npm i ",
     "install_backend": "cd frontend && npm i",
-    "start:backend": "cd backend && npm start react-scripts start",
+    "start:backend": "cd backend && npm run start",
     "start:frontend": "cd frontend && npm start react-scripts start ",
     "first_step": "npm run install_backend && npm run install_frontend",
-    "start": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\"",
+    "start_dev": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\"",
+    "start": "start:backend",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "repository": {
